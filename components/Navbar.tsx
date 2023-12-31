@@ -112,24 +112,6 @@ const Navbar = () => {
              Blog
             </Link>
                 </div>
-                {/* <div className="mx-auto flex flex-row justify-center items-center mt-40 gap-x-4">
-                  <button className="flex items-center cursor-pointer bg-[#2A2A80] text-base px-5 py-3 text-white rounded-md">
-                    <Link
-                      href=""
-                      onClick={handleToggle}
-                    >
-                      Register
-                    </Link>
-                  </button>
-                  <button className="flex items-center bg-[#D1563B] text-base px-5 py-3 text-white rounded-md cursor-pointer">
-                    <Link
-                      href=""
-                      onClick={handleToggle}
-                    >
-                      Open an Account
-                    </Link>
-                  </button>
-                </div> */}
               </div>
             </div>
           )}
