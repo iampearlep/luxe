@@ -6,7 +6,6 @@ import Link from "next/link";
 import { AiOutlineUser } from "react-icons/ai";
 import { LiaShoppingCartSolid } from "react-icons/lia";
 import { IoMdHeartEmpty, IoIosSearch } from "react-icons/io";
-import { HiOutlineSearch } from "react-icons/hi";
 
 const Navbar = () => {
   const [isToggle, setIsToggle] = useState(false);
@@ -15,9 +14,9 @@ const Navbar = () => {
   };
   return (
     <div className="">
-      <div className="w-11/12 mx-auto px-2 py-6">
-        <div className="flex flex-row justify-between">
-          <div className="flex flex-row gap-x-8">
+      <div className="mx-auto flex justify-between px-4 py-8">
+        <div className="flex flex-row mx-auto items-center justify-between w-11/12">
+          <div className="hidden md:flex flex-row gap-x-8">
             <Link href="/" className="cursor-pointer">
             Home
             </Link>
@@ -34,7 +33,7 @@ const Navbar = () => {
           <div className="text-2xl font-extrabold">
           LUXE.
           </div>
-          <div className="flex flex-row gap-x-8">
+          <div className="hidden md:flex flex-row gap-x-8">
           <button className="">
             <Link href="">
                 <AiOutlineUser />
@@ -59,13 +58,30 @@ const Navbar = () => {
         </div>
        
         {/* Mobile Screens */}
-        {/* <div className="lg:hidden block">
-          <div className="flex flex-row gap-x-6">
-            <button className="flex items-center bg-[#D1563B] text-sm px-5 py-2 text-white rounded-md cursor-pointer">
-              <Link href="https://app.utopiepay.com/account/create/select-country">
-                Get Started
-              </Link>
-            </button>
+        <div className="md:hidden flex flex-row">
+          <div className="flex flex-row gap-x-4">
+          <div className="flex flex-row gap-x-2">
+          <button className="">
+            <Link href="">
+                <AiOutlineUser />
+            </Link>
+          </button>
+          <button className="">
+            <Link href="">
+              <LiaShoppingCartSolid />
+            </Link>
+          </button>
+          <button className="">
+            <Link href="">
+              <IoMdHeartEmpty />
+            </Link>
+          </button>
+          <button className="">
+            <Link href="">
+              <IoIosSearch />
+            </Link>
+          </button>
+        </div>
             <button onClick={handleToggle}>
               {isToggle ? (
                 <IoCloseSharp className="text-3xl" />
@@ -83,32 +99,23 @@ const Navbar = () => {
               </button>
               <div className="mt-20 max-h-screen overflow-y-auto w-full">
                 <div className="flex flex-col gap-10 items-start justify-start font-semibold text-xl px-5">
-                  <Link
-                    href="/faq"
-                    onClick={handleToggle}
-                    className="cursor-pointer"
-                  >
-                    FAQs
-                  </Link>
-                  <Link
-                    href="/privacy"
-                    onClick={handleToggle}
-                    className="cursor-pointer"
-                  >
-                    Privacy policy
-                  </Link>
-                  <Link
-                    href="/terms"
-                    onClick={handleToggle}
-                    className="cursor-pointer"
-                  >
-                    Terms & Conditions
-                  </Link>
+                <Link href="/"  onClick={handleToggle} className="cursor-pointer">
+            Home
+            </Link>
+            <Link href="/shop"  onClick={handleToggle} className="cursor-pointer">
+             Shop
+            </Link>
+            <Link href="/"  onClick={handleToggle} className="cursor-pointer">
+              Portfolio
+            </Link>
+            <Link href="/"  onClick={handleToggle} className="cursor-pointer">
+             Blog
+            </Link>
                 </div>
-                <div className="mx-auto flex flex-row justify-center items-center mt-40 gap-x-4">
+                {/* <div className="mx-auto flex flex-row justify-center items-center mt-40 gap-x-4">
                   <button className="flex items-center cursor-pointer bg-[#2A2A80] text-base px-5 py-3 text-white rounded-md">
                     <Link
-                      href="https://app.utopiepay.com/"
+                      href=""
                       onClick={handleToggle}
                     >
                       Register
@@ -116,17 +123,17 @@ const Navbar = () => {
                   </button>
                   <button className="flex items-center bg-[#D1563B] text-base px-5 py-3 text-white rounded-md cursor-pointer">
                     <Link
-                      href="https://app.utopiepay.com/account/create/select-country"
+                      href=""
                       onClick={handleToggle}
                     >
                       Open an Account
                     </Link>
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           )}
-        </div>*/}
+        </div>
       </div> 
     </div>
   );
