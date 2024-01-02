@@ -16,72 +16,72 @@ const Navbar = () => {
     <div className="">
       <div className="mx-auto flex justify-between px-4 py-8">
         <div className="flex flex-row mx-auto items-center justify-between w-11/12">
-          <div className="hidden md:flex flex-row gap-x-8">
+          <div className="hidden md:flex flex-row text-lg gap-x-8">
             <Link href="/" className="cursor-pointer">
-            Home
+              Home
             </Link>
             <Link href="/shop" className="cursor-pointer">
-             Shop
+              Shop
             </Link>
             <Link href="/" className="cursor-pointer">
               Portfolio
             </Link>
             <Link href="/" className="cursor-pointer">
-             Blog
+              Blog
             </Link>
           </div>
-          <div className="text-2xl font-extrabold">
-          LUXE.
+          <div className="text-3xl font-extrabold -ml-0 lg:-ml-10">
+            LUXE.
           </div>
-          <div className="hidden md:flex flex-row gap-x-8">
-          <button className="">
-            <Link href="">
+          <div className="hidden md:flex flex-row items-center justify-center text-lg gap-x-8">
+            <button className="">
+              <Link href="">
                 <AiOutlineUser />
-            </Link>
-          </button>
-          <button className="">
-            <Link href="">
-              <LiaShoppingCartSolid />
-            </Link>
-          </button>
-          <button className="">
-            <Link href="">
-              <IoMdHeartEmpty />
-            </Link>
-          </button>
-          <button className="">
-            <Link href="">
-              <IoIosSearch />
-            </Link>
-          </button>
+              </Link>
+            </button>
+            <button className="">
+              <Link href="">
+                <LiaShoppingCartSolid />
+              </Link>
+            </button>
+            <button className="">
+              <Link href="">
+                <IoMdHeartEmpty />
+              </Link>
+            </button>
+            <button className="">
+              <Link href="">
+                <IoIosSearch />
+              </Link>
+            </button>
+          </div>
         </div>
-        </div>
-       
+
         {/* Mobile Screens */}
         <div className="md:hidden flex flex-row">
           <div className="flex flex-row gap-x-4">
-          <div className="flex flex-row gap-x-2">
-          <button className="">
-            <Link href="">
-                <AiOutlineUser />
-            </Link>
-          </button>
-          <button className="">
-            <Link href="">
-              <LiaShoppingCartSolid />
-            </Link>
-          </button>
-          <button className="">
-            <Link href="">
-              <IoMdHeartEmpty />
-            </Link>
-          </button>
-          <button className="">
-            <Link href="">
-              <IoIosSearch />
-            </Link>
-          </button>
-        </div>
+            <div className="flex flex-row gap-x-2">
+              <button className="">
+                <Link href="">
+                  <AiOutlineUser />
+                </Link>
+              </button>
+              <button className="">
+                <Link href="">
+                  <LiaShoppingCartSolid />
+                </Link>
+              </button>
+              <button className="">
+                <Link href="">
+                  <IoMdHeartEmpty />
+                </Link>
+              </button>
+              <button className="">
+                <Link href="">
+                  <IoIosSearch />
+                </Link>
+              </button>
+            </div>
             <button onClick={handleToggle}>
               {isToggle ? (
                 <IoCloseSharp className="text-3xl" />
@@ -99,24 +99,24 @@ const Navbar = () => {
               </button>
               <div className="mt-20 max-h-screen overflow-y-auto w-full">
                 <div className="flex flex-col gap-10 items-start justify-start font-semibold text-xl px-5">
-                <Link href="/"  onClick={handleToggle} className="cursor-pointer">
-            Home
-            </Link>
-            <Link href="/shop"  onClick={handleToggle} className="cursor-pointer">
-             Shop
-            </Link>
-            <Link href="/"  onClick={handleToggle} className="cursor-pointer">
-              Portfolio
-            </Link>
-            <Link href="/"  onClick={handleToggle} className="cursor-pointer">
-             Blog
-            </Link>
+                  <Link href="/" onClick={handleToggle} className="cursor-pointer">
+                    Home
+                  </Link>
+                  <Link href="/shop" onClick={handleToggle} className="cursor-pointer">
+                    Shop
+                  </Link>
+                  <Link href="/" onClick={handleToggle} className="cursor-pointer">
+                    Portfolio
+                  </Link>
+                  <Link href="/" onClick={handleToggle} className="cursor-pointer">
+                    Blog
+                  </Link>
                 </div>
               </div>
             </div>
           )}
         </div>
-      </div> 
+      </div>
     </div>
   );
 };
