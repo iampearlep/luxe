@@ -6,8 +6,8 @@ import { FaFacebookF } from "react-icons/fa6";
 const Footer = () => {
   return (
     <div className="pt-24 pb-20">
-      <div className="w-11/12 px-4 mx-auto flex flex-row items-start justify-between">
-       <div className="w-7/12 flex flex-row items-start justify-between">
+      <div className="w-full md:w-11/12 px-5 mx-auto flex flex-col md:flex-row items-start justify-between">
+       <div className="w-full md:w-7/12 grid grid-cols-2 md:flex md:flex-row gap-y-4 items-center md:items-start justify-between">
        <div className="text-2xl font-extrabold">
             LUXE.
           </div>
@@ -77,7 +77,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      
     </div>
   );
 };
