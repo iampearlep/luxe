@@ -18,7 +18,7 @@ const Collections = () => {
                 <Image src={Img68} height={711} width={474} alt="" className="w-full " />
                 </div>
             </div>
-            <div className="absolute top-[45%] left-[10%] md:top-[38%] md:left-[36%] flex flex-col items-center bg-white rounded-md px-12 py-5">
+            <div className="absolute top-[45%] left-[12%] lg:top-[35%] lg:left-[30%] xl:top-[38%] xl:left-[34%] xxl:top-[38%] xxl:left-[36%] flex flex-col items-center bg-white rounded-md px-11 py-5">
                 <h3 className="text-xl md:text-3xl font-semibold py-3">Summer 2023 Collections</h3>
                 <button className="bg-black text-white px-6 py-2 mb-2">Shop Now</button>
             </div>
