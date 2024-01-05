@@ -9,8 +9,8 @@ const Recommended = () => {
       <div className="w-11/12 mx-auto">
         <h2 className=" py-8 text-3xl font-semibold">Recommended For You.</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 justify-center items-center gap-x-6 w-full">
-          <div>
-            <div className="h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px]  overflow-y-hidden">
+          <div className="">
+            <div className="relative h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px] overflow-y-hidden">
               <Image
                 src={Img1}
                 height={632}
@@ -18,6 +18,9 @@ const Recommended = () => {
                 alt=""
                 className="w-full h-full"
               />
+              <div className="absolute top-0 left-0 w-full h-full bg-black/30 opacity-0 hover:opacity-100 flex items-center justify-center">
+              <button className=" bg-white text-black py-2 px-6  flex items-center justify-center">Shop Now</button>
+            </div>
             </div>
             <div className="pt-3">
               <h3 className="text-lg font-semibold">Sweater jacket</h3>
@@ -25,7 +28,7 @@ const Recommended = () => {
             </div>
           </div>
           <div>
-            <div className="h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px]  overflow-y-hidden">
+            <div className="relative h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px]  overflow-y-hidden">
               <Image
                 src={Img5}
                 height={711}
@@ -33,6 +36,9 @@ const Recommended = () => {
                 alt=""
                 className="w-full h-full"
               />
+               <div className="absolute top-0 left-0 w-full h-full bg-black/30 opacity-0 hover:opacity-100 flex items-center justify-center">
+              <button className=" bg-white text-black py-2 px-6  flex items-center justify-center">Shop Now</button>
+            </div>
             </div>
             <div className="pt-3">
               <h3 className="text-lg font-semibold">Wide Leg Pants</h3>
@@ -40,7 +46,7 @@ const Recommended = () => {
             </div>
           </div>
           <div>
-            <div className="h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px] overflow-y-hidden">
+            <div className="relative h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px] overflow-y-hidden">
               <Image
                 src={Img49}
                 height={735}
@@ -48,6 +54,9 @@ const Recommended = () => {
                 alt=""
                 className="w-full h-full "
               />
+               <div className="absolute top-0 left-0 w-full h-full bg-black/30 opacity-0 hover:opacity-100 flex items-center justify-center">
+              <button className=" bg-white text-black py-2 px-6  flex items-center justify-center">Shop Now</button>
+            </div>
             </div>
             <div className="pt-3">
               <h3 className="text-lg font-semibold">Straight Blue Jeans</h3>
