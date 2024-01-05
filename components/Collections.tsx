@@ -18,9 +18,9 @@ const Collections = () => {
                 <Image src={Img68} height={711} width={474} alt="" className="w-full " />
                 </div>
             </div>
-            <div className="absolute top-[45%] left-[20%] md:top-[38%] md:left-[38%] flex flex-col items-center bg-white rounded-md px-5 py-5">
+            <div className="absolute top-[45%] left-[10%] md:top-[38%] md:left-[36%] flex flex-col items-center bg-white rounded-md px-12 py-5">
                 <h3 className="text-xl md:text-3xl font-semibold py-3">Summer 2023 Collections</h3>
-                <button className="bg-black text-white rounded-sm px-4 py-2 mb-2">Shop Now</button>
+                <button className="bg-black text-white px-6 py-2 mb-2">Shop Now</button>
             </div>
         </div>
     </div>

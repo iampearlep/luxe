@@ -92,7 +92,7 @@ const Navbar = () => {
           </div>
           {isToggle && (
             <div
-              className="fixed top-0 right-0 h-full  w-full bg-white z-10 flex flex-col justify-start items-start "
+              className="fixed top-0 right-0 h-full  w-full bg-white z-30 flex flex-col justify-start items-start "
             >
               <button onClick={handleToggle} className="absolute top-5 right-5">
                 <IoCloseSharp className="text-3xl" />
