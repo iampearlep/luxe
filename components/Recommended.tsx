@@ -2,6 +2,7 @@ import Image from "next/image";
 import Img1 from "@/public/images/1.jpg";
 import Img5 from "@/public/images/5.jpg";
 import Img49 from "@/public/images/49.jpg";
+import { HiOutlineShoppingBag } from "react-icons/hi2";
 
 const Recommended = () => {
   return (
@@ -22,9 +23,14 @@ const Recommended = () => {
               <button className=" bg-white text-black py-2 px-6  flex items-center justify-center">Shop Now</button>
             </div>
             </div>
-            <div className="pt-3">
-              <h3 className="text-lg font-semibold">Sweater jacket</h3>
+            <div className="pt-3 flex flex-row justify-between items-center ">
+             <div>
+             <h3 className="text-lg font-semibold">Sweater jacket</h3>
               <p>N10, 000</p>
+             </div>
+             <div className="">
+              <button className="flex items-center justify-center border border-black px-2 py-2 rounded-full"><HiOutlineShoppingBag /></button>
+             </div>
             </div>
           </div>
           <div>
@@ -40,9 +46,14 @@ const Recommended = () => {
               <button className=" bg-white text-black py-2 px-6  flex items-center justify-center">Shop Now</button>
             </div>
             </div>
-            <div className="pt-3">
-              <h3 className="text-lg font-semibold">Wide Leg Pants</h3>
+            <div className="pt-3 flex flex-row justify-between items-center ">
+             <div>
+             <h3 className="text-lg font-semibold">Wide Leg Pants</h3>
               <p>N10, 000</p>
+             </div>
+             <div className="">
+              <button className="flex items-center justify-center border border-black px-2 py-2 rounded-full"><HiOutlineShoppingBag /></button>
+             </div>
             </div>
           </div>
           <div>
@@ -58,9 +69,14 @@ const Recommended = () => {
               <button className=" bg-white text-black py-2 px-6  flex items-center justify-center">Shop Now</button>
             </div>
             </div>
-            <div className="pt-3">
-              <h3 className="text-lg font-semibold">Straight Blue Jeans</h3>
+            <div className="pt-3 flex flex-row justify-between items-center ">
+             <div>
+             <h3 className="text-lg font-semibold">Straight Blue Jeans</h3>
               <p>N10, 000</p>
+             </div>
+             <div className="">
+              <button className="flex items-center justify-center border border-black px-2 py-2 rounded-full"><HiOutlineShoppingBag /></button>
+             </div>
             </div>
           </div>
         </div>

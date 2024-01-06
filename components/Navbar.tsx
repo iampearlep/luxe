@@ -36,22 +36,22 @@ const Navbar = () => {
           <div className="hidden md:flex flex-row items-center justify-center text-lg gap-x-8">
             <button className="">
               <Link href="">
-                <AiOutlineUser />
+                <AiOutlineUser className="w-5 h-4" />
               </Link>
             </button>
             <button className="">
               <Link href="">
-                <LiaShoppingCartSolid />
+                <LiaShoppingCartSolid className="w-6 h-5" />
               </Link>
             </button>
             <button className="">
               <Link href="">
-                <IoMdHeartEmpty />
+                <IoMdHeartEmpty className="w-5 h-4" />
               </Link>
             </button>
             <button className="">
               <Link href="">
-                <IoIosSearch />
+                <IoIosSearch className="w-5 h-4" />
               </Link>
             </button>
           </div>
