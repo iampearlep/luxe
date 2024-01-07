@@ -42,5 +42,17 @@ export default {
           },
         ]
       },
+      {
+        name: "color",
+        title: "Color",
+        type: "array",
+        of: [{ type: "string" }],
+      },
+      {
+        name: "size",
+        title: "Size",
+        type: "array",
+        of: [{ type: "string" }],
+      },
     ]
   }
