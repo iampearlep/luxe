@@ -1,6 +1,10 @@
+import ProductsList from "@/components/ProductsList";
+
 export default function Page() {
     return (
-      <main className='text-black'>Welcome to shop</main>
+      <main className='text-black'>
+        <ProductsList/>
+      </main>
     )
   }
   

@@ -10,7 +10,7 @@ const Card : React.FC<CardProps> = ({product}) => {
   return (
     <div>
                <div className="">
-            <div className="relative h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px] overflow-y-hidden">
+            <div className="relative h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px] overflow-y-hidden cursor-pointer">
               <Image
                 src={product.image}
                 height={product.height}

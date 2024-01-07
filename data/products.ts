@@ -25,8 +25,8 @@ export const products: Products[] = [
     },
     {
         id: 1,
-        name: "Mesh Crop Top & Wide-Leg Cargo Pants",
-        image: Img6,
+        name: "Mesh Top & Parachute Pants",
+        image: Img5,
         price: "10,000",
         category: "women",
         height: 711,
@@ -70,8 +70,8 @@ export const products: Products[] = [
     },
     {
         id: 6,
-        name: "Mesh Top & Parachute Pants",
-        image: Img5,
+        name: "Mesh Crop Top & Wide-Leg Cargo Pants",
+        image: Img6,
         price: "10,000",
         category: "women",
         height: 711,
