@@ -1,12 +1,12 @@
 import React from 'react'
 import Image from "next/image";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
-import { ForYouData } from '@/interfaces';
-interface RecommendedCardProps {
-  product: ForYouData;
+import { ForYouData, Products } from '@/interfaces';
+interface CardProps {
+  product: ForYouData | Products ;
 }
 
-const RecommendedCard : React.FC<RecommendedCardProps> = ({product}) => {
+const Card : React.FC<CardProps> = ({product}) => {
   return (
     <div>
                <div className="">
@@ -36,4 +36,4 @@ const RecommendedCard : React.FC<RecommendedCardProps> = ({product}) => {
   )
 }
 
-export default RecommendedCard
+export default Card
