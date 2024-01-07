@@ -10,7 +10,7 @@ export default {
       },
       {
         name: "slug",
-        type: "string",
+        type: "slug",
         title: "Slug",
         options: {
           source: "name",
@@ -21,6 +21,26 @@ export default {
         type: "array",
         title: "Images",
         of: [{type: "image"}],
+      },
+      {
+        name: 'description',
+        type: 'text',
+        title: 'Description'
+      },
+      {
+        name: 'price',
+        type: 'number',
+        title: 'Price',
+      },
+      {
+        name: 'category',
+        type: 'reference',
+        title: 'Product Category',
+        to: [
+          {
+            type: 'category',
+          },
+        ]
       },
     ]
   }

@@ -3,13 +3,55 @@ import Img1 from "@/public/images/1.jpg";
 import Img5 from "@/public/images/5.jpg";
 import Img49 from "@/public/images/49.jpg";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
+import RecommendedCard from "./RecommendedCard";
+
+ interface ForYou {
+  image: string;
+  id: number;
+  name: string;
+  price: string;
+  height: number;
+};
+
+const data: ForYou[] = [
+  {
+      id: 0,
+      name: "Sweater jacket",
+      image: "/public/images/1.jpg",
+      price: "10,000",
+      height: 632,
+  },
+  {
+      id: 1,
+      name: "Wide Leg Pants",
+      image: "/public/images/5.jpg",
+      price: "10,000",
+      height: 711,
+  },
+  {
+      id: 2,
+      name: "Straight Blue Jeans",
+      image: "/public/images/49.jpg",
+      price: "10,000",
+      height: 735,
+  },
+]
+
+
 
 const Recommended = () => {
   return (
     <div>
       <div className="w-11/12 mx-auto">
         <h2 className=" py-8 text-3xl font-semibold">Recommended For You.</h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 justify-center items-center gap-x-6 w-full">
+
+       {/* {data.map((item) => {
+        return (
+          <RecommendedCard key={item.id} item={data} />
+        )
+       })} */}
+
+        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-y-6 justify-center items-center gap-x-6 w-full">
           <div className="">
             <div className="relative h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px] overflow-y-hidden">
               <Image
@@ -79,7 +121,7 @@ const Recommended = () => {
              </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

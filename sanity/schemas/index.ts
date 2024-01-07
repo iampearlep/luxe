@@ -1,2 +1,3 @@
 import shop from "./shop"
-export const schemaTypes = [shop]
+import category from "./category"
+export const schemaTypes = [shop, category]
