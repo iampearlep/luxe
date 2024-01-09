@@ -17,6 +17,7 @@ export interface Products {
     width: number;
 }
 export interface SanityProducts {
+    slice(arg0: number, arg1: number): any;
     _id: string;
     name: string;
     price: number;
