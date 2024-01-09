@@ -16,3 +16,11 @@ export interface Products {
     height: number;
     width: number;
 }
+export interface SanityProducts {
+    _id: string;
+    name: string;
+    price: number;
+    imageUrl: any;
+    categoryName: string;
+    slug: string;
+}

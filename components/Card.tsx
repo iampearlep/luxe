@@ -1,20 +1,20 @@
 import React from 'react'
 import Image from "next/image";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
-import { ForYouData, Products } from '@/interfaces';
+import { SanityProducts } from '@/interfaces';
 interface CardProps {
-  product: ForYouData | Products ;
+  product:  SanityProducts ;
 }
 
 const Card : React.FC<CardProps> = ({product}) => {
   return (
     <div>
                <div className="">
-            <div className="relative h-[500px] lg:h-[450px] xl:h-[500px] xxl:h-[600px] overflow-y-hidden cursor-pointer">
+            <div className="relative h-[500px] lg:h-[450px] xl:h-[400px] xxl:h-[300px] overflow-y-hidden cursor-pointer">
               <Image
-                src={product.image}
-                height={product.height}
-                width={product.width}
+                src={product.imageUrl}
+                height={711}
+                width={474}
                 alt=""
                 className="w-full h-full"
               />
