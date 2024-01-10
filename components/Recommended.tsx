@@ -1,39 +1,7 @@
-import Image from "next/image";
-import { ForYouData } from "@/interfaces";
-import Img1 from "@/public/images/1.jpg";
-import Img5 from "@/public/images/5.jpg";
-import Img49 from "@/public/images/49.jpg";
-import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { SanityProducts } from "@/interfaces";
 import Card from "./Card";
 import { client } from "@/app/lib/sanity";
 
-// const products : ForYouData[] = [
-//   {
-//       id: 0,
-//       name: "Cozy Knit Sweater & Straight Leg Deep Blue Pants",
-//       image: Img1,
-//       price: "10,000",
-//       height: 632,
-//       width: 474,
-//   },
-//   {
-//       id: 1,
-//       name: "Cute Crop Mesh Top & Parachute Cargo Pants",
-//       image: Img5,
-//       price: "10,000",
-//       height: 711,
-//       width: 474,
-//   },
-//   {
-//       id: 2,
-//       name: "Cozy Comfort Knit Sweater & Straight Leg Blue Pants",
-//       image: Img49,
-//       price: "10,000",
-//       height: 735,
-//       width: 474,
-//   },
-// ]
 async function getProductData() {
   const query = `*[_type == 'product'][0...4] | order(_createdAt desc){
       _id,
@@ -47,8 +15,6 @@ async function getProductData() {
   const products = await client.fetch(query)
   return products
 }
-
-
 
 
  async function Recommended() {

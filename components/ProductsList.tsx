@@ -4,7 +4,7 @@ import { client } from "@/app/lib/sanity";
 import { SanityProducts } from "@/interfaces";
 
 async function getProductData() {
-    const query = `*[_type == 'product'][0...4] | order(_createdAt desc){
+    const queries = `*[_type == 'product'][0...4] | order(_createdAt desc){
         _id,
           price,
           name,
@@ -13,7 +13,7 @@ async function getProductData() {
           "categoryName": category -> name,
           "imageUrl": images[0].asset -> url,
       }`
-    const products = await client.fetch(query)
+    const products = await client.fetch(queries)
     return products
 }
 

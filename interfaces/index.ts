@@ -25,3 +25,13 @@ export interface SanityProducts {
     categoryName: string;
     slug: string;
 }
+
+export interface SanityProductDetail {
+    _id: string;
+    name: string;
+    price: number;
+    images: any;
+    categoryName: string;
+    slug: string;
+    description: string;
+}
