@@ -1,6 +1,7 @@
 import { client, urlFor } from "@/app/lib/sanity";
 import { SanityProductDetail, SanityProducts } from "@/interfaces";
 import Image from "next/image";
+import Link from "next/link";
 
 async function getData (slug: string) {
   const query = `*[_type == 'product' && slug.current == '${slug}'][0]{
@@ -39,6 +40,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <p>{data.categoryName}</p>
         <p>{data.description}</p>
         <p>{data.price}</p>
+        <Link href={`/cart`}><button>Add to cart</button></Link>
         </div>
       </div>
     )
