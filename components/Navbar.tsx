@@ -6,8 +6,10 @@ import Link from "next/link";
 import { AiOutlineUser } from "react-icons/ai";
 import { LiaShoppingCartSolid } from "react-icons/lia";
 import { IoMdHeartEmpty, IoIosSearch } from "react-icons/io";
+import { useShoppingCart } from "use-shopping-cart";
 
-const Navbar = () => {
+const Navbar = () => { 
+  const {cartCount} = useShoppingCart()
   const [isToggle, setIsToggle] = useState(false);
   const handleToggle = () => {
     setIsToggle(!isToggle);
@@ -31,7 +33,9 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="text-3xl font-extrabold -ml-0 lg:-ml-10">
+            <Link href="/" className="cursor-pointer">
             LUXE.
+            </Link>
           </div>
           <div className="hidden md:flex flex-row items-center justify-center text-lg gap-x-8">
             <button className="">
@@ -39,8 +43,9 @@ const Navbar = () => {
                 <AiOutlineUser className="w-5 h-4" />
               </Link>
             </button>
-            <button className="">
-              <Link href="">
+            <button className="relative">
+              <Link href="/cart">
+                <p className="bg-black text-white text-center text-xs px-1 -mt-2 absolute right-0 rounded-full">{cartCount}</p>
                 <LiaShoppingCartSolid className="w-6 h-5" />
               </Link>
             </button>
@@ -66,11 +71,12 @@ const Navbar = () => {
                   <AiOutlineUser />
                 </Link>
               </button>
-              <button className="">
-                <Link href="">
-                  <LiaShoppingCartSolid />
-                </Link>
-              </button>
+              <button className="relative">
+              <Link href="/cart">
+                <p className="bg-black text-white text-center text-xs px-1 -mt-2 absolute right-0 rounded-full">{cartCount}</p>
+                <LiaShoppingCartSolid className="w-6 h-5" />
+              </Link>
+            </button>
               <button className="">
                 <Link href="">
                   <IoMdHeartEmpty />

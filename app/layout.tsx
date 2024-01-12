@@ -3,6 +3,7 @@ import { Crimson_Text } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Provider from '@/provider/Provider'
 
 const inter = Crimson_Text({
   subsets: ['latin'],
@@ -22,13 +23,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-       <header>
+      <Provider>
+      <header>
         <Navbar />
        </header>
        <main> {children}</main>
        <footer>
         <Footer />
        </footer>
+      </Provider>
         </body>
     </html>
   )

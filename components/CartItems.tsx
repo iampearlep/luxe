@@ -1,65 +1,50 @@
+'use client'
 import React from 'react'
 import Image from "next/image"
-import Img10 from '@/public/images/10.jpg'
-import Img7 from '@/public/images/7.jpg'
-import Img3 from '@/public/images/3.jpg'
+import Link from 'next/link'
+import { useShoppingCart } from 'use-shopping-cart'
+
 const CartItems = () => {
+  const {cartCount, cartDetails, removeItem} = useShoppingCart();
+
   return (
     <div className='md:w-8/12'>
-       <div className=' flex flex-col gap-y-4  rounded-xl px-6 py-6 shadow-sm'>
       
-        <div className=' flex flex-row justify-between items-center border-b border-gray-300 py-3'>
-               <div className='w-2/12  md:h-[120px] overflow-y-hidden'>
-               <Image src={Img10} height={60} width={120} alt="" className="w-full " />
-               </div>
-                <div className='w-4/12'>
-                <p className='text-sm md:text-base'>Summer Breeze Crop Top & Straight Leg Jeans</p>
+      {cartCount === 0? (
+        <div>
+          Cart is Empty <span className='font-semibold'>BOSS</span>
+          <div className='w-full md:w-2/6 mt-4 text-center bg-black text-white rounded-sm py-1 px-3'>
+                    <Link href='/shop'>
+                    <button>Continue Shopping</button>
+                    </Link>
+                   
                 </div>
-            <div className='w-2/12 text-center'>
-            <p className='text-sm md:text-base'>1</p>
-            </div>
-            <div className='w-2/12 text-center'>
-            <p className='text-sm md:text-base'>$10,000</p>
-            </div>
-                <div className='2/12 text-center'>
-                <button>X</button>
-                </div>
+          </div>
+      ): (
+        <div className=' flex flex-col gap-y-4  rounded-xl px-6 py-6 divide-y divide-solid shadow-sm '>
+          {Object.values(cartDetails ?? {}).map((entry) => (
+           
+                <div className=' flex flex-row justify-between items-center  py-4' key={entry.id}>
+        <div className='w-2/12  md:h-[120px] overflow-y-hidden'>
+        <Image src={entry.image as string} height={60} width={120} alt="" priority={true} className="w-full " />
         </div>
-        <div className=' flex flex-row justify-between items-center border-b border-gray-300 py-3' >
-               <div className='w-2/12 md:h-[120px] overflow-y-hidden'>
-               <Image src={Img7} height={60} width={120} alt="" className="w-full " />
-               </div>
-                <div className='w-4/12'>
-                <p className='text-sm md:text-base'>Bold Denim Corset & Wide Leg Leather Cargo Pants</p>
-                </div>
-            <div className='w-2/12 text-center'>
-            <p className='text-sm md:text-base'>2</p>
-            </div>
-            <div className='w-2/12 text-center'>
-            <p className='text-sm md:text-base'>$10,000</p>
-            </div>
-                <div className='2/12 text-center'>
-                <button>X</button>
-                </div>
-        </div>
-        <div className=' flex flex-row justify-between items-center py-3'>
-               <div className='w-2/12 md:h-[120px] overflow-y-hidden'>
-               <Image src={Img3} height={60} width={120} alt="" className="w-full " />
-               </div>
-                <div className='w-4/12'>
-                <p className='text-sm md:text-base'>Cozy Comfort Knit Sweater & Straight Leg Blue Pants</p>
-                </div>
-            <div className='w-2/12 text-center'>
-            <p className='text-sm md:text-base'>3</p>
-            </div>
-            <div className='w-2/12 text-center'>
-            <p className='text-sm md:text-base'>$10,000</p>
-            </div>
-                <div className='2/12 text-center'>
-                <button>X</button>
-                </div>
-        </div>
-       </div>
+         <div className='w-4/12'>
+         <p className='text-sm md:text-base'>{entry.name}</p>
+         </div>
+     <div className='w-2/12 text-center'>
+     <p className='text-sm md:text-base'>{entry.quantity}</p>
+     </div>
+     <div className='w-2/12 text-center'>
+     <p className='text-sm md:text-base'>${entry.price}</p>
+     </div>
+         <div className='2/12 text-center'>
+         <button onClick={() => removeItem(entry.id)}>X</button>
+         </div>
+ </div>
+        
+          ))}
+      </div>
+      )}
 
     </div>
   )
