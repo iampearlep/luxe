@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sanity/image-url": "^1.0.2",
+    "@sanity/vision": "^3.24.1",
     "@stripe/stripe-js": "^2.2.2",
     "next": "14.0.4",
     "next-sanity": "^7.0.7",
