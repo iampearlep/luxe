@@ -42,7 +42,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
         <p className="text-base">{data.description}</p>
         <p className="text-sm font-semibold">${data.price}</p>
        <div className='w-full md:w-1/2 mt-3 text-center bg-black text-white rounded-sm py-1'>
-       <Link href={`/cart`}><AddToCart key={data._id} currency="USD" description={data.description} name={data.name} price={data.price} image={data.images[0]} id={data._id} /></Link>
+       <AddToCart key={data._id} currency="USD" description={data.description} name={data.name} price={data.price} image={data.images[0]} id={data._id} />
        </div>
         </div>
       </div>
