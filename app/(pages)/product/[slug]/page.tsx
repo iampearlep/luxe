@@ -45,7 +45,6 @@ export default async function Page({ params }: { params: { slug: string } }) {
        <div className='w-full mt-3 text-center flex flex-row justify-start items-center gap-x-3 '>
        <AddToCart key={data._id} currency="USD" description={data.description} name={data.name} price={data.price} price_id={data.price_id} image={data.images[0]} id={data._id} />
        <CheckoutNow key={data._id} currency="USD" description={data.description} name={data.name} price={data.price} price_id={data.price_id} image={data.images[0]} id={data._id} />
-       
        </div>
         </div>
       </div>

@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { CartProvider } from 'use-shopping-cart'
+import { Toaster } from 'react-hot-toast';
 
 interface Props {
     children: React.ReactNode
@@ -22,6 +23,7 @@ const Provider = ({children}: Props) => {
         >
             {children}
         </CartProvider>
+        <Toaster />
     </div>
   )
 }

@@ -3,6 +3,7 @@ import React from 'react'
 import Image from "next/image"
 import Link from 'next/link'
 import { useShoppingCart } from 'use-shopping-cart'
+import toast from 'react-hot-toast';
 
 const CartItems = () => {
   const {cartCount, cartDetails, removeItem} = useShoppingCart();
@@ -38,7 +39,10 @@ const CartItems = () => {
      <p className='text-sm md:text-base'>${entry.price}</p>
      </div>
          <div className='2/12 text-center'>
-         <button onClick={() => removeItem(entry.id)}>X</button>
+         <button onClick={() => {
+          removeItem(entry.id); 
+          toast.error(`The ${entry.name} has been removed from your cart.`);
+         }}>X</button>
          </div>
  </div>
         

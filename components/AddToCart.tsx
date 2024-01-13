@@ -2,6 +2,7 @@
 import { urlFor } from '@/app/lib/sanity';
 import React from 'react'
 import { useShoppingCart } from 'use-shopping-cart'
+import toast from 'react-hot-toast';
 
 export interface Product {
     name: string;
@@ -27,7 +28,8 @@ const AddToCart = ({name, description, price, currency, image, id, price_id}: Pr
     }
   return (
     <button onClick={() => {
-        addItem(product)
+        addItem(product); 
+        toast.success(`Great choice! ${product.name} has been added to your cart.`)
     }} className='bg-black text-white  rounded-sm py-1 px-3'>Add To Cart</button>
   )
 }
