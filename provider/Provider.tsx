@@ -12,7 +12,7 @@ const Provider = ({children}: Props) => {
         <CartProvider
         mode="payment"
         cartMode="client-only"
-        stripe={'test'}
+        stripe={process.env.NEXT_PUBLIC_STRIPE_PUBLIC_KEY as string}
         currency="USD"
         shouldPersist={true}
         billingAddressCollection={true}

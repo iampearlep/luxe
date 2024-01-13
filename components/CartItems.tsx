@@ -26,7 +26,7 @@ const CartItems = () => {
            
                 <div className=' flex flex-row justify-between items-center  py-4' key={entry.id}>
         <div className='w-2/12  md:h-[120px] overflow-y-hidden'>
-        <Image src={entry.image as string} height={60} width={120} alt="" priority={true} className="w-full " />
+        <Image src={entry.image as string} height={60} width={120} alt="" priority={true} className="w-auto h-auto " />
         </div>
          <div className='w-4/12'>
          <p className='text-sm md:text-base'>{entry.name}</p>

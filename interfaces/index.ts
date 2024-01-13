@@ -24,6 +24,7 @@ export interface SanityProducts {
     imageUrl: any;
     categoryName: string;
     slug: string;
+    price_id: string;
 }
 
 export interface SanityProductDetail {
@@ -34,4 +35,5 @@ export interface SanityProductDetail {
     categoryName: string;
     slug: string;
     description: string;
+    price_id: string;
 }

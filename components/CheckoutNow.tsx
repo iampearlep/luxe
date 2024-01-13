@@ -1,6 +1,6 @@
 "use client"
-import { urlFor } from '@/app/lib/sanity';
 import React from 'react'
+import { urlFor } from '@/app/lib/sanity';
 import { useShoppingCart } from 'use-shopping-cart'
 
 export interface Product {
@@ -13,9 +13,12 @@ export interface Product {
     price_id: string;
 }
 
-const AddToCart = ({name, description, price, currency, image, id, price_id}: Product) => {
-    const {addItem} = useShoppingCart()
+const CheckoutNow = ({name, description, price, currency, image, id, price_id}: Product) => {
+    const {checkoutSingleItem} = useShoppingCart()
 
+    function buyNow(priceId: string){
+        checkoutSingleItem(priceId);
+    }
     const product = {
         name: name,
         description: description,
@@ -25,11 +28,12 @@ const AddToCart = ({name, description, price, currency, image, id, price_id}: Pr
         id: id,
         price_id: price_id,
     }
+
   return (
     <button onClick={() => {
-        addItem(product)
-    }} className='bg-black text-white  rounded-sm py-1 px-3'>Add To Cart</button>
+       buyNow(product.price_id)
+    }} className='bg-white text-black rounded-sm py-1 px-3 border border-gray-300'>Checkout Now</button>
   )
 }
 
-export default AddToCart
+export default CheckoutNow

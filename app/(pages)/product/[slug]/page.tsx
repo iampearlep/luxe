@@ -1,8 +1,8 @@
 import { client, urlFor } from "@/app/lib/sanity";
 import AddToCart from "@/components/AddToCart";
-import { SanityProductDetail, SanityProducts } from "@/interfaces";
+import CheckoutNow from "@/components/CheckoutNow";
+import { SanityProductDetail} from "@/interfaces";
 import Image from "next/image";
-import Link from "next/link";
 
 async function getData (slug: string) {
   const query = `*[_type == 'product' && slug.current == '${slug}'][0]{
@@ -13,6 +13,7 @@ async function getData (slug: string) {
       description,
       "categoryName": category -> name,
       "slug": slug.current,
+      price_id
   }`
 
   const data = await client.fetch(query)
@@ -34,15 +35,17 @@ export default async function Page({ params }: { params: { slug: string } }) {
         width={474}
         alt=""
         priority={true}
-        className="w-full h-full object-center bg-center"
+        className="w-auto h-auto object-center bg-center"
       />
         </div>
         <div className="w-10/12 mx-auto md:w-full flex flex-col px-6 gap-y-3 ">
         <h1 className="text-3xl font-semibold">{data.name}</h1>
         <p className="text-base">{data.description}</p>
         <p className="text-sm font-semibold">${data.price}</p>
-       <div className='w-full md:w-1/2 mt-3 text-center bg-black text-white rounded-sm py-1'>
-       <AddToCart key={data._id} currency="USD" description={data.description} name={data.name} price={data.price} image={data.images[0]} id={data._id} />
+       <div className='w-full mt-3 text-center flex flex-row justify-start items-center gap-x-3 '>
+       <AddToCart key={data._id} currency="USD" description={data.description} name={data.name} price={data.price} price_id={data.price_id} image={data.images[0]} id={data._id} />
+       <CheckoutNow key={data._id} currency="USD" description={data.description} name={data.name} price={data.price} price_id={data.price_id} image={data.images[0]} id={data._id} />
+       
        </div>
         </div>
       </div>
