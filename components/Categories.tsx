@@ -6,7 +6,7 @@ const Categories = () => {
   return (
     <div className="py-4">
         <h2 className=" py-8 text-3xl font-semibold w-11/12 mx-auto">Categories.</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 h-[800px] overflow-y-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 ">
            <div className="">
            <div className="relative">
             <Image src={Img2} height={678} width={564} alt="" className="w-full " />
