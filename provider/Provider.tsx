@@ -17,8 +17,8 @@ const Provider = ({children}: Props) => {
         currency="USD"
         shouldPersist={true}
         billingAddressCollection={true}
-        successUrl='http://localhost:3000/success'
-        cancelUrl='http://localhost:3000/error'
+        successUrl='https://luxe-opal.vercel.app/success'
+        cancelUrl='https://luxe-opal.vercel.app/error'
         language='en-US'
         >
             {children}
