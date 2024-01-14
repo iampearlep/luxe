@@ -1,21 +1,21 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from 'next/server'
 import Stripe from "stripe"
-const stripe = new Stripe(process.env.NEXT_PUBLIC_STRIPE_SECRET_KEY!)
+import { validateCartItems } from 'use-shopping-cart/utilities'
+import { inventory } from '@/config/inventory'
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
+    apiVersion: '2023-10-16'
+})
 
-export async function POST(request: Request){
- 
-    const cartDetails = await request.json()
-    console.log(cartDetails)
-    const lineItems = cartDetails
-    const origin = request.headers.get('origin')
+export async function POST(req: Request) {
+    const cartDetails = await req.json()
+    const line_items = validateCartItems(inventory, cartDetails)
+    const origin = req.headers.get('origin')
     const session = await stripe.checkout.sessions.create({
-        submit_type: "pay",
-        mode: "payment",
-        payment_method_types: ['card', 'us_bank_account'],
-        line_items: lineItems,
-        billing_address_collection: "auto",
-        success_url: `${origin}/success`,
-        cancel_url: `${origin}/error`,
-    })
-   return NextResponse.json(session)
+        mode: 'payment',
+        submit_type: 'pay',
+        line_items,
+        success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${origin}/cart`
+      })
+ return NextResponse.json({id: session.id})
 }
