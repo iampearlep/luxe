@@ -4,7 +4,25 @@ import Link from 'next/link'
 import { useShoppingCart } from 'use-shopping-cart'
 
 const CartSummary = () => {
-    const {cartCount, totalPrice} = useShoppingCart();
+    const {cartCount, totalPrice, redirectToCheckout, cartDetails} = useShoppingCart();
+
+   
+    async function handleCheckout(){
+      const res =  await fetch('http://localhost:3000/api/checkout', {
+            method: 'POST',
+            body: JSON.stringify(cartDetails)
+        })
+        if (!res.ok) {
+            throw new Error(`HTTP error! Status: ${res.status}`);
+        }
+      const data = await res.json()
+      console.log(data)
+      const result = await redirectToCheckout(data.id)
+      if(result?.error){
+        console.error(result)
+      }
+
+    }
   
   return (
     <div className='w-full md:w-4/12'>
@@ -24,7 +42,7 @@ const CartSummary = () => {
                     <p>Order Total: ${totalPrice! + 5000}</p>
                 </div>
                 <div className='w-full text-center bg-black text-white rounded-sm py-1'>
-                    <button className=''>Checkout</button> 
+                    <button onClick={handleCheckout} className=''>Checkout</button> 
                 </div>
                 <div className='w-full mt-3 text-center bg-white text-black rounded-sm py-1 border border-gray-300'>
                     <Link href='/shop'>
