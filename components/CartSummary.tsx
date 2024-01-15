@@ -7,14 +7,16 @@ import { useShoppingCart } from 'use-shopping-cart'
 const CartSummary = () => {
     const {cartCount, totalPrice, redirectToCheckout, cartDetails} = useShoppingCart();
     
-
     async function handleCheckout(e:any){
         e.preventDefault();
         try {
-            const res = await fetch('/api/checkout', {
+            const res = await fetch(`/api/checkout`, {
               method: 'POST',
               body: JSON.stringify(cartDetails)
             })
+            if(!res.ok){
+                throw new Error("Error fetching checkout")
+            }
             const data = await res.json()
             const stripe = await getStripe();
 
