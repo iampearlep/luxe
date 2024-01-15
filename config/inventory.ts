@@ -42,5 +42,16 @@ export const inventory: InventoryProduct[] = [
       price_id: 'price_1OXqBPE0B2WVxiTc0EBJQwpc',
       quantity: 1,
       formattedPrice: '$200.00'
-    }
+    },
+    {
+        name: 'Crop Top & Acid Wash Baggy Cargo Jeans',
+        description: 'Make a statement with a crop top tucked into flowy cargo pants, adding a touch of femininity to your streetwear game.',
+        price: 15000,
+        currency: 'USD',
+        image: 'https://cdn.sanity.io/images/h4oeo41c/production/7eced67fd318b7255e8d6baf4b31aba9172479a1-474x592.jpg',
+        id: 'b41d2aa6-684f-4fef-8ef3-032c1d2c2f94',
+        price_id: 'price_1OXpy6E0B2WVxiTcIYgqMW1A',
+        quantity: 1,
+        formattedPrice: '$150.00'
+      }
   ]
