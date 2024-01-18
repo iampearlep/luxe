@@ -12,6 +12,7 @@ import {
 	FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
+import { signInWithEmailAndPassword } from "../actions";
 
 import toast from 'react-hot-toast';
 import { Button } from "@/components/ui/button";
@@ -33,8 +34,17 @@ export default function SignInForm() {
 		},
 	});
 
-	function onSubmit(data: z.infer<typeof FormSchema>) {
-		toast(`You submitted the following values: ${JSON.stringify(data, null, 2)}`);
+	async function onSubmit(data: z.infer<typeof FormSchema>) {
+		const result = await signInWithEmailAndPassword(data)
+
+		const {error} = JSON.parse(result)
+
+		if(error) {
+			toast.error(`${error.message}`);
+		} else {
+			toast.success(`Successfully logged in`);
+		}
+
 	}
 
 	return (

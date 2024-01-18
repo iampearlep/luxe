@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input";
 import toast from 'react-hot-toast';
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { signUpWithEmailAndPassword } from "../actions";
 
 const FormSchema = z
 	.object({
@@ -41,8 +42,19 @@ export default function RegisterForm() {
 		},
 	});
 
-	function onSubmit(data: z.infer<typeof FormSchema>) {
-		toast(`You submitted the following values: ${JSON.stringify(data, null, 2)}`);
+	async function onSubmit(data: z.infer<typeof FormSchema>) {
+
+		const result = await signUpWithEmailAndPassword(data)
+
+		const {error} = JSON.parse(result)
+
+		if(error) {
+			toast.error(`${error.message}`);
+		} else {
+			toast.success(`Successfully registered`);
+		}
+
+		
 	}
 
 	return (
