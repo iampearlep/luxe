@@ -5,7 +5,7 @@ import Categories from "@/components/Categories"
 import Recommended from "@/components/Recommended"
 import Collections from "@/components/Collections"
 import Cta from "@/components/Cta"
-import SignOut from "../(auth)/components/SignOut"
+// import SignOut from "../(auth)/components/SignOut"
 import { redirect } from "next/navigation"
 import readUserSession from "../lib/actions"
 
@@ -16,7 +16,7 @@ export default async function Home() {
   }
   return (
     <main className=''>
-      <SignOut />
+      {/* <SignOut /> */}
       <Banner />
       <Newarrivals />
       <Categories />
