@@ -39,8 +39,8 @@ export default function OAuthForm() {
        
 	return (
         <div className="flex flex-row gap-x-5">
-            <Button className="w-full" onClick={loginWithGithub}><IoLogoGithub /></Button>
-            <Button className="w-full" onClick={loginWithGoogle}><FcGoogle /></Button>
+            <Button className="w-full" onClick={loginWithGithub}><IoLogoGithub className='w-7 h-5' /></Button>
+            <Button className="w-full" onClick={loginWithGoogle}><FcGoogle className='w-5 h-5' /></Button>
         </div>
     )
 }

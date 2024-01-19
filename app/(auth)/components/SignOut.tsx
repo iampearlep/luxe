@@ -17,7 +17,7 @@ export default function SignOut() {
     return (
         <div>
             <form action={Logout}>
-           <Button className="text-[9px] font-extrabold">Sign out</Button>
+           <Button className="text-[9px] md:text-xs font-extrabold">Sign out</Button>
             </form>
         </div>
     )

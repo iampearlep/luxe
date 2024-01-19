@@ -1,7 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
 import {
 	Form,
@@ -91,7 +90,7 @@ export default function SignInForm() {
 					)}
 				/>
 				<Button type="submit" className="w-full flex gap-2">
-					SignIn
+					Sign In
 				</Button>
 			</form>
 		</Form>

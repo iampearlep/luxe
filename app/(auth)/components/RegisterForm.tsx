@@ -51,7 +51,7 @@ export default function RegisterForm() {
 		if(error) {
 			toast.error(`${error.message}`);
 		} else {
-			toast.success(`Successfully registered`);
+			toast.success(`Successfully registered, check your email for confirmation`);
 		}
 
 		
