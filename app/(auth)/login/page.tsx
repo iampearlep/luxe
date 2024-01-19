@@ -7,7 +7,7 @@ export default async function Page() {
 
   const {data} = await readUserSession()
   if (data.session){
-    return redirect("http://localhost:3000/")
+    return redirect("https://luxe-vtg.vercel.app/")
   }
 
 
