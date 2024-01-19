@@ -1,7 +1,7 @@
 import createSupabaseSeverClient from "@/app/lib/supabase/server"
 import { Button } from "@/components/ui/button"
 import { redirect } from "next/navigation"
-import { RiUserReceived2Line } from "react-icons/ri";
+// import { RiUserReceived2Line } from "react-icons/ri";
 
 export default function SignOut() {
 
@@ -17,7 +17,7 @@ export default function SignOut() {
     return (
         <div>
             <form action={Logout}>
-           <button><RiUserReceived2Line /></button>
+           <Button className="text-[9px] font-extrabold">Sign out</Button>
             </form>
         </div>
     )

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Crimson_Text } from 'next/font/google'
 import '../styles/globals.css'
-import Navbar from '@/components/Navbar'
+import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Provider from '@/provider/Provider'
 
@@ -28,7 +28,7 @@ export default function RootLayout({
       <body className={inter.className}>
       <Provider>
       <header>
-        <Navbar />
+        <Header />
        </header>
        <main> {children}</main>
        <footer>

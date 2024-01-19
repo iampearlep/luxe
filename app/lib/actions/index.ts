@@ -1,4 +1,3 @@
-
 import createSupabaseSeverClient from "../supabase/server"
 
 export default async function readUserSession(){

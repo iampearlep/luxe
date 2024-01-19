@@ -7,12 +7,12 @@ export default async function Page() {
 
   const {data} = await readUserSession()
   if (data.session){
-    return redirect("https://luxe-vtg.vercel.app/")
+    return redirect("/")
   }
 
 
     return (
-      <main className='bg-black'>
+      <main className='bg-black w-full overflow-x-hidden'>
       <div className="flex flex-col gap-y-6 justify-center items-center h-screen">
         <h1 className="text-white text-2xl font-semibold">Welcome to <span  className="uppercase">luxe.</span></h1>
 			<div className="w-96">

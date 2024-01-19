@@ -7,7 +7,7 @@ import OAuthForm from "./OAuthForm";
 
 export function AuthForm() {
 	return (
-		<div className="w-11/12 mx-auto md:w-full space-y-5">
+		<div className="w-10/12 mx-auto md:w-full space-y-5">
 			<Tabs defaultValue="signin" className="w-full">
 				<TabsList className="grid w-full grid-cols-2">
 					<TabsTrigger value="signin">SignIn</TabsTrigger>

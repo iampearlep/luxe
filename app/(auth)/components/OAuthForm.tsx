@@ -13,14 +13,14 @@ export default function OAuthForm() {
       )
 
       const loginWithGoogle = async() => {
-        const { data, error } = await supabase.auth.signInWithOAuth({
+        await supabase.auth.signInWithOAuth({
             provider: 'google',
             options: {
               queryParams: {
                 access_type: 'offline',
                 prompt: 'consent',
               },
-              redirectTo: `${location.origin}/login/callback `,
+              redirectTo: `https://luxe-vtg.vercel.app/login/callback`,
             },
           })
           
@@ -29,7 +29,7 @@ export default function OAuthForm() {
            await supabase.auth.signInWithOAuth({
                 provider: 'github',
             options: {
-             redirectTo: `${location.origin}/login/callback `,
+                redirectTo: `https://luxe-vtg.vercel.app/login/callback`,
                 },
             })
         }
