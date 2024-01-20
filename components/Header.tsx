@@ -1,7 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
-import SignOut from "@/app/(auth)/components/SignOut";
-
+ import AuthButton from "./AuthButton";
+import { Button } from "./ui/button";
+import Link from "next/link";
 const Header = () => {
   return (
     <div className="flex flex-row w-full mx-auto items-center">
@@ -10,8 +11,15 @@ const Header = () => {
         <Navbar />
       </div>
       <div className="w-3/12 md:w-1/12">
-        {" "}
-        <SignOut />
+        {/* {" "}
+        
+        <Button className="text-[9px] md:text-xs font-extrabold" >
+        <Link href="/login">
+               Login
+               </Link>
+        </Button> */}
+        
+       <AuthButton />
       </div>
     </div>
   );

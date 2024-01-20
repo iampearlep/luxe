@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { useRouter } from 'next/navigation';
 
 import {
   Form,
@@ -16,6 +17,7 @@ import { signInWithEmailAndPassword } from "../actions";
 import toast from "react-hot-toast";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { redirect } from "next/navigation";
 
 const FormSchema = z.object({
   email: z.string().email(),
@@ -25,6 +27,7 @@ const FormSchema = z.object({
 });
 
 export default function SignInForm() {
+	const router = useRouter();
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
@@ -42,7 +45,9 @@ export default function SignInForm() {
       toast.error(`${error.message}`);
     } else {
       toast.success(`Successfully logged in`);
+	  router.push("/");
     }
+	
   }
 
   return (

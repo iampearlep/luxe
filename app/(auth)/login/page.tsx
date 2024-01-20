@@ -1,12 +1,12 @@
-import { redirect } from "next/navigation";
+// import { redirect } from "next/navigation";
 import { AuthForm } from "../components/AuthForm";
-import readUserSession from "@/app/lib/actions";
+// import readUserSession from "@/app/lib/actions";
 
 export default async function Page() {
-  const { data } = await readUserSession();
-  if (data.session) {
-    return redirect("/");
-  }
+  // const { data } = await readUserSession();
+  // if (data.session) {
+  //   return redirect("/");
+  // }
 
   return (
     <main className="bg-black w-full overflow-x-hidden">
