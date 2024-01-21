@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
- import AuthButton from "./AuthButton";
-import { Button } from "./ui/button";
-import Link from "next/link";
+//  import AuthButton from "./AuthButton";
+// import { Button } from "./ui/button";
+// import Link from "next/link";
 const Header = () => {
   return (
     <div className="flex flex-row w-full mx-auto items-center">
@@ -19,7 +19,7 @@ const Header = () => {
                </Link>
         </Button> */}
         
-       <AuthButton />
+       {/* <AuthButton /> */}
       </div>
     </div>
   );

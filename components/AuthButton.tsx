@@ -43,7 +43,7 @@ const AuthButton = () => {
   return (
     <div>
        {
-        isLoggedIn === false ? (
+        isLoggedIn === true ? (
         <div>
              <Button className="text-[9px] md:text-xs font-extrabold" onClick={handleSignOut}>
           Sign Out
