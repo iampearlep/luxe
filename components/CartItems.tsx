@@ -6,10 +6,10 @@ import { useShoppingCart } from "use-shopping-cart";
 import toast from "react-hot-toast";
 
 const CartItems = () => {
-  const { cartCount, cartDetails, removeItem } = useShoppingCart();
+  const { cartCount, cartDetails, removeItem, decrementItem, incrementItem } = useShoppingCart();
 
   return (
-    <div className="md:w-8/12">
+    <div className="md:w-9/12">
       {cartCount === 0 ? (
         <div>
           Cart is Empty <span className="font-semibold">BOSS</span>
@@ -39,8 +39,12 @@ const CartItems = () => {
               <div className="w-4/12">
                 <p className="text-sm md:text-base">{entry.name}</p>
               </div>
-              <div className="w-2/12 text-center">
+              <div className="w-3/12 text-center">
+               <div className="flex flex-row justify-center items-center gap-x-1 md:gap-x-3">
+                <button className="bg-black text-white px-2 md:px-3 py-1 rounded-sm" onClick={() => {decrementItem(entry.id)}}>-</button>
                 <p className="text-sm md:text-base">{entry.quantity}</p>
+                <button className="bg-black text-white px-2 md:px-3 py-1 rounded-sm" onClick={()=> {incrementItem(entry.id)}}>+</button>
+               </div>
               </div>
               <div className="w-2/12 text-center">
                 <p className="text-sm md:text-base">${entry.price}</p>

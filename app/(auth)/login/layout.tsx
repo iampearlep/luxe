@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "../../styles/globals.css";
 import Provider from "@/provider/Provider";
-import { Crimson_Text } from "next/font/google";
+import { Quicksand} from "next/font/google";
 
-const inter = Crimson_Text({
+const inter = Quicksand({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
 });

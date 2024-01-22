@@ -54,13 +54,13 @@ const CartSummary = () => {
             <p>Order Total: ${totalPrice! + 5000}</p>
           </div>
           <div className="w-full text-center bg-black text-white rounded-sm py-1">
-            <button onClick={handleCheckout} className="">
+            <button onClick={handleCheckout} className="w-full text-center bg-black text-white rounded-sm py-1">
               Checkout
             </button>
           </div>
           <div className="w-full mt-3 text-center bg-white text-black rounded-sm py-1 border border-gray-300">
             <Link href="/shop">
-              <button>Continue Shopping</button>
+              <button className="w-full text-center bg-white text-black rounded-sm py-1 border border-gray-300">Continue Shopping</button>
             </Link>
           </div>
         </div>

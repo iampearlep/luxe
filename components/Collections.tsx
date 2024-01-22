@@ -37,8 +37,9 @@ const Collections = () => {
             />
           </div>
         </div>
-        <div className="absolute top-[45%] left-[12%] lg:top-[35%] lg:left-[30%] xl:top-[40%] xl:left-[34%] xxl:top-[38%] xxl:left-[36%] flex flex-col items-center bg-white rounded-md px-11 py-5">
-          <h3 className="text-xl md:text-3xl font-semibold py-3">
+        <div className="absolute top-[45%] left-[14%] md:left-[32%] lg:left-[28%] xl:left-[32.5%] xxl:left-[34.5%] flex flex-col items-center justify-center bg-white rounded-md px-5 py-3 lg:px-11 lg:py-5">
+          <div className="flex flex-col items-center justify-center">
+          <h3 className="text-xl lg:text-3xl font-semibold py-3">
             Summer 2023 Collections
           </h3>
           <Link href="/shop">
@@ -47,6 +48,7 @@ const Collections = () => {
               Shop Now
             </button>{" "}
           </Link>
+          </div>
         </div>
       </div>
     </div>
