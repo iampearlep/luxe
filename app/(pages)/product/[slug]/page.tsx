@@ -36,9 +36,10 @@ export default async function Page({ params }: { params: { slug: string } }) {
         />
       </div>
       <div className="w-10/12 mx-auto md:w-full flex flex-col px-6 gap-y-3 ">
+      <p className="uppercase text-xs font-semibold">{data.categoryName}</p>
         <h1 className="text-3xl font-semibold">{data.name}</h1>
-        <p className="text-base">{data.description}</p>
         <p className="text-sm font-semibold">${data.price}</p>
+        <p className="text-base font-medium">{data.description}</p>
         <div className="w-full mt-3 text-center flex flex-row justify-start items-center gap-x-3 ">
           <AddToCart
             key={data._id}

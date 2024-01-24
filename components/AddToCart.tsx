@@ -42,7 +42,7 @@ const AddToCart = ({
           `Great choice! ${product.name} has been added to your cart.`
         );
       }}
-      className="bg-black text-white  rounded-sm py-1 px-3"
+      className="bg-black text-white text-sm rounded-sm py-2 px-4 border border-black"
     >
       Add To Cart
     </button>

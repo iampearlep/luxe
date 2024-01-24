@@ -42,7 +42,7 @@ const CheckoutNow = ({
       onClick={() => {
         buyNow(product.price_id);
       }}
-      className="bg-white text-black rounded-sm py-1 px-3 border border-gray-300"
+      className="bg-white text-black text-sm rounded-sm py-2 px-4 border border-gray-300"
     >
       Checkout Now
     </button>
