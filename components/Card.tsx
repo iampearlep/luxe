@@ -25,15 +25,18 @@ const Card: React.FC<CardProps> = ({ product }) => {
             </button>
           </div>
         </div>
-        <div className="pt-3 flex flex-row justify-between items-center ">
+        <div className="pt-2 flex flex-col gap-y-1">
+          <div><p className="uppercase text-xs">{product.categoryName}</p></div>
+          <div className=" flex flex-row justify-between items-center gap-y-2">
           <div>
             <h3 className="text-lg font-semibold">{product.name}</h3>
             <p>${product.price}</p>
           </div>
           <div className="">
-            <button className="flex items-center justify-center border border-black px-2 py-2 rounded-full">
+            <button className="flex items-center justify-center border border-black px-2 py-2 rounded-full invisible">
               <HiOutlineShoppingBag />
             </button>
+          </div>
           </div>
         </div>
       </div>

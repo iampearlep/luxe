@@ -58,7 +58,7 @@ const CartSummary = () => {
               Checkout
             </button>
           </div>
-          <div className="w-full mt-3 text-center bg-white text-black rounded-sm py-1 border border-gray-300">
+          <div className="w-full mt-3 text-center bg-white text-black rounded-sm py-1">
             <Link href="/shop">
               <button className="w-full text-center bg-white text-black rounded-sm py-1 border border-gray-300">Continue Shopping</button>
             </Link>
