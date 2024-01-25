@@ -44,7 +44,7 @@ const CheckoutNow = ({
       }}
       className="bg-white text-black text-sm rounded-sm py-2 px-4 border border-gray-300"
     >
-      Checkout Now
+      Buy Now
     </button>
   );
 };
